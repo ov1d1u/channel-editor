@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, sqlite3, base64, shutil
+import os, sqlite3, shutil
 
 class DBManager:
 	def __init__(self, dbfile):
@@ -83,13 +83,11 @@ class DBManager:
 		r = self.data.fetchone()
 		return r
 	
-	def add_tv(self, row):
-		self.data.execute("INSERT INTO tv_channels VALUES (?,?,?,?,?,?,?)", [row[0], base64.b64encode(row[1]), row[2], row[3], row[4], row[5], row[6]])
-		self.conn.commit()
+	def add_tv(self, values):
+		self.execute_insert_query('tv_channels', values)
 	
 	def add_radio(self, row):
-		self.data.execute("INSERT INTO radio_channels VALUES (?,?,?,?,?)", [row[0], base64.b64encode(row[1]), row[2], row[3], row[4]])
-		self.conn.commit()
+		self.execute_insert_query('radio_channels', values)
 		
 	def update_tv(self, id, col, val):
 		self.data.execute("UPDATE tv_channels SET "+col+"=? WHERE id=?", [val, id])
@@ -123,6 +121,17 @@ class DBManager:
 	
 	def delete_radio(self, id):
 		self.data.execute("DELETE FROM radio_channels WHERE id=?", (id, ))
+		self.conn.commit()
+
+	def execute_insert_query(self, table, values):
+		columns = ', '.join(values.keys())
+		placeholders = ', '.join('?' * len(values))
+		sql = "INSERT INTO {0} ({1}) VALUES ({2})".format(
+			table,
+			columns,
+			placeholders
+		)
+		self.data.execute(sql, values.values())
 		self.conn.commit()
 		
 	def save(self, filename):

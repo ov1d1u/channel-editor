@@ -183,7 +183,15 @@ class Main:
 				fh.close()
 				id = re.sub(r'\W+', '', nume + str(random.randint(100, 999)))
 				iter = channelstore.append([id, image, nume, url, chid, ''])
-				self.db.add_tv([id, imgdata, nume, json.dumps([url]), '', chid, json.dumps([])])
+				self.db.add_tv({
+					'id': id,
+					'icon': base64.b64encode(imgdata),
+					'name': nume,
+					'streamurls': json.dumps([url]),
+					'params': '',
+					'guide': chid,
+					'audiochannels': json.dumps([])
+				})
 				threading.Thread(target=self.updateIcon, args=(iter, icon, channelstore)).start()
 		
 		if '|radiochannels|' in data:
@@ -208,7 +216,13 @@ class Main:
 				fh.close()
 				id = re.sub(r'\W+', '', nume + str(random.randint(100, 999)))
 				iter = channelstore.append([id, image, nume, url])
-				self.db.add_radio([id, imgdata, nume, json.dumps([url]), ''])
+				self.db.add_radio({
+					'id': id,
+					'icon': base64.b64encode(imgdata),
+					'name': nume,
+					'streamurls': json.dumps([url]),
+					'params': ''
+				})
 				threading.Thread(target=self.updateIcon, args=(iter, icon, channelstore)).start()
 				
 	def updateIcon(self, iter, icon, channelstore):
@@ -415,7 +429,15 @@ class Main:
 			param = json.dumps(params)
 			audio = json.dumps(audios)
 			threading.Thread(target=self.imgur.upload, args=(imgdata, self.setIconURL, id)).start()
-			self.db.add_tv([id, imgdata, name, url, param, tvguide, audio])
+			self.db.add_tv({
+				'id': id,
+				'icon': base64.b64encode(imgdata),
+				'name': name,
+				'streamurls': url,
+				'params': param,
+				'guide': tvguide,
+				'audiochannels': audio
+			})
 			
 		else:
 			if not self.gui.get_object('liststore4').get_iter_root():
@@ -440,7 +462,13 @@ class Main:
 			imgdata = imgtools.saveImage(img)
 			url = json.dumps(urls)
 			param = json.dumps(params)
-			self.db.add_radio([id, imgdata, name, url, param])
+			self.db.add_radio({
+				'id': id,
+				'icon': base64.b64encode(imgdata),
+				'name': name,
+				'streamurls': url,
+				'params': param
+			})
 			threading.Thread(target=self.imgur.upload, args=(imgdata, self.setIconURL, id)).start()
 		self.gui.get_object('window3').hide()
 	
@@ -544,7 +572,15 @@ class Main:
 			param = json.dumps(params)
 			threading.Thread(target=self.imgur.upload, args=(imgdata, self.setIconURL, id)).start()
 			self.db.delete_tv(id)
-			self.db.add_tv([id, imgdata, name, url, param, tvguide, audio])
+			self.db.add_tv({
+				'id': id,
+				'icon': base64.b64encode(imgdata),
+				'name': name,
+				'streamurls': url,
+				'params': param,
+				'guide': tvguide,
+				'audiochannels': audio
+			})
 		else:
 			treeselection = self.gui.get_object('treeview2').get_selection()
 			(model, m_iter) = treeselection.get_selected()
@@ -575,7 +611,13 @@ class Main:
 			url = json.dumps(urls)
 			param = json.dumps(params)
 			self.db.delete_radio(id)
-			self.db.add_radio([id, imgdata, name, url, param])
+			self.db.add_radio({
+				'id': id,
+				'icon': base64.b64encode(imgdata),
+				'name': name,
+				'streamurls': url,
+				'params': param
+			})
 			threading.Thread(target=self.imgur.upload, args=(imgdata, self.setIconURL, id)).start()
 		self.gui.get_object('window3').hide()
 		
