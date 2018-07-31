@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: channel editorh\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-27 00:27+0100\n"
+"PO-Revision-Date: 2015-03-27 23:55+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../ceditor.glade.h:1
+msgid "Open from file"
+msgstr "Otvori iz datoteke"
+
+#: ../ceditor.glade.h:2
+msgid "Open from URL"
+msgstr "Otvori iz URL-a"
+
+#: ../ceditor.glade.h:3
+msgid "New format"
+msgstr "Novi format"
+
+#: ../ceditor.glade.h:4
+msgid "Save a channel list to compatible with TV-MAXE 0.07"
+msgstr "Spremite popis programa u kompatibilnom obliku s TV-MAXE 0.07"
+
+#: ../ceditor.glade.h:5
+msgid "Old format"
+msgstr "Stari format"
+
+#: ../ceditor.glade.h:6
+msgid ""
+"Save a channel list to be compatible with TV-MAXE versions prior to 0.07"
+msgstr ""
+"Spremi popis programa u kompatibilnom obliku s TV-MAXE inačicom starijom od "
+"0.07"
+
+#: ../ceditor.glade.h:7
+msgid "Channel List Editor"
+msgstr "Uređivač popisa programa"
+
+#: ../ceditor.glade.h:8
+msgid "Icon"
+msgstr "Ikona"
+
+#: ../ceditor.glade.h:9
+msgid "Name"
+msgstr "Naziv"
+
+#: ../ceditor.glade.h:10
+msgid "Stream URL"
+msgstr "URL streama"
+
+#: ../ceditor.glade.h:11
+msgid "TV Guide"
+msgstr "EPG - TV programski vodič"
+
+#: ../ceditor.glade.h:12
+msgid "Audio channels"
+msgstr "Zvučni kanal"
+
+#: ../ceditor.glade.h:13
+msgid "TV Channels"
+msgstr "TV program"
+
+#: ../ceditor.glade.h:14
+msgid "Radio Channels"
+msgstr "Radio program"
+
+#: ../ceditor.glade.h:15
+msgid "Insert URL:"
+msgstr "Umetni URL:"
+
+#: ../ceditor.glade.h:16
+msgid "Add new channel"
+msgstr "Dodaj novi program"
+
+#: ../ceditor.glade.h:17
+msgid "Channel name:"
+msgstr "Naziv programa:"
+
+#: ../ceditor.glade.h:18
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: ../ceditor.glade.h:19
+msgid "TV-Guide URL:"
+msgstr "URL EPG - TV programskog vodiča"
+
+#: ../ceditor.glade.h:20
+msgid "Select an image from disk and upload it to Imgur"
+msgstr "Odaberite sliku s diska i pošaljite ga na imgur"
+
+#: ../ceditor.glade.h:21
+msgid "Open image"
+msgstr "Otvori sliku"
+
+#: ../ceditor.glade.h:22
+msgid "URL"
+msgstr "URL"
+
+#: ../ceditor.glade.h:23
+msgid "Parameters"
+msgstr "Parametri"
+
+#: ../ceditor.glade.h:24
+msgid "ID"
+msgstr "ID"
+
+#: ../ceditor.glade.h:25
+msgid "Description"
+msgstr "Opis"
+
+#: ../ceditor.glade.h:26
+msgid "Audio channels:"
+msgstr "Zvučni kanali:"
+
+#: ../ceditor.glade.h:27
+msgid "Channel URLs:"
+msgstr "URL kanala:"
+
+#: ../ceditor.glade.h:28
+msgid "Channel list info..."
+msgstr "Informacija popisa programa..."
+
+#: ../ceditor.glade.h:29
+msgid "Please fill some info about this channel list"
+msgstr "Upišite kratke informacije o ovom popisu programa"
+
+#: ../ceditor.glade.h:30
+msgid "Channel list name:"
+msgstr "Naziv popisa programa:"
+
+#: ../ceditor.glade.h:31
+msgid "Channel list version:"
+msgstr "Inačica popisa programa:"
+
+#: ../ceditor.glade.h:32
+msgid "Author (maintainer) name:"
+msgstr "Ime autora (održavatelja):"
+
+#: ../ceditor.glade.h:33
+msgid "Webpage (blog) URL:"
+msgstr "URL web stranice (bloga):"
+
+#: ../ceditor.glade.h:34
+msgid "TV Guide source URL:"
+msgstr "URL EPG - TV programskog vidiča"
+
+#: ../ceditor.glade.h:35
+msgid "Logo results"
+msgstr "Rezultat logotipa"
+
+#: ../ceditor.glade.h:37
+#, no-c-format
+msgid "Logos for %s:"
+msgstr "Logotip za %s:"
+
+#: ../ceditor.glade.h:38
+msgid "Searching for images..."
+msgstr "Pretraživanje slika..."
+
+#: ../ceditor.glade.h:39
+msgid "Select an image file from your computer:"
+msgstr "Odaberite datoteku slike s vašeg računala:"
+
+#: ../channeleditor.py:37
+msgid "TV-Maxe Channel Editor is starting..."
+msgstr "TV-Maxe uređivač programa se pokreće..."
+
+#: ../channeleditor.py:124
+msgid "Failed to retrieve "
+msgstr "Neuspjelo primanje"
+
+#: ../channeleditor.py:294
+msgid "Error while saving file..."
+msgstr "Greška pri spremanju datoteke..."
+
+#: ../channeleditor.py:379 ../channeleditor.py:500
+msgid "Channel name must have at least 3 characters."
+msgstr "Naziv programa mora sadržavati bar 3 znaka."
+
+#: ../channeleditor.py:383 ../channeleditor.py:422 ../channeleditor.py:508
+#: ../channeleditor.py:554
+msgid "Please add at least one URL in Channel URLs."
+msgstr "Dodajte bar jedan URL u URL-ove programa."
+
+#: ../dbmanager.py:40
+msgid "Missing column"
+msgstr "Nedastaje redak"
+
+#: ../dbmanager.py:56 ../dbmanager.py:64
+msgid "Invalid data type for "
+msgstr "Neispravna vrsta podataka za"
+
+#: ../tv-maxe-channel-editor.desktop:9 ../tv-maxe-channel-editor.desktop:12
+msgid "TV-MAXE Channel Editor"
+msgstr "TV-MAXE uređivač programa"
+
+#: ../tv-maxe-channel-editor.desktop:18
+msgid "Create, add and edit TV-MAXE channels lists."
+msgstr "Stvorite, dodajte i uredite TV-MAXE popise programa."
+
+#: ../tv-maxe-channel-editor.desktop:25
+msgid "TV;Television;Programs;channels;HD;HD channels;"
+msgstr "TV;Televizija;Programi;kanali;HD;HD programi;"
+
+#: ../tv-maxe-channel-editor.desktop:31
+msgid "TV-MAXE - watch TV on Linux"
+msgstr "TV-MAXE - gledajte TV na Linuxu"
